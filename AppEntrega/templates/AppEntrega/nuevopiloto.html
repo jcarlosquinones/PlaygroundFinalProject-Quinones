@@ -1,0 +1,37 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+<div>
+    <div>
+        <div>
+            <div>
+                <h3><div class="text-bg-dark p-3"><p class="text-center">Formulario de Nuevos Pilotos</h3></p>
+                    <p class="lead">
+                        <p class="text-center">
+                        Ingresa aqui tus datos y crea tu nuevo piloto.
+                      </p>
+          {% if mi_Formulario.errors %}
+          <p style="color:red"> Estan mal tus datos, favor revisalo nuevamente</p>
+          {% endif %}
+          <p class="text-center">
+            <form>
+                <form method="POST" action="">{% csrf_token %}
+                {% for field in form.visible_field %}
+                    <div class="form-row align-items-center">
+                        <label>{{field.label}}:</label>
+                        {{field}}
+                    </div>
+                    {% comment %} {{ mi_Formulario.as_p }} {% endcomment %}
+                {% endfor %}
+                <input type="submit" value="Enviar">
+                </form>
+            <div>
+        <div>
+    <div>
+<div>
+
+{% endblock contenidoquecambia %}
+          

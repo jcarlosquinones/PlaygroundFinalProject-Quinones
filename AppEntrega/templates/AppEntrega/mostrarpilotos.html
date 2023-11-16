@@ -1,0 +1,31 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+
+<p class="lead">
+    <p class="text-left">
+    Buscaste los pilotos de la escuderia: <strong>{{escuderia}}</strong>
+  </p>
+
+
+        {% if busquedapilotos %}
+
+            <p>La cantidad de pilotos titulares es de {{busquedapilotos|length}} pilotos</p>
+
+                <ul>
+                    {% for pilotos in busquedapilotos %}
+                        <li>
+                            {{pilotos.nombre}} {{pilotos.apellido}}
+                        </li>
+                    {% endfor %}
+                </ul>
+        {% else %}   
+        
+            <p>No hay pilotos para la escuderia</p>
+
+        {% endif %}
+
+{% endblock contenidoquecambia %}
