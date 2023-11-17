@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block contenidoquecambia %}
 
 
@@ -22,18 +24,18 @@
                             <div class="col-lg-10 col-xl-7 mx-auto">
                                 <h3 class="display-4">Inicia Sesion!</h3>
                                 <p class="text-muted mb-4">Ingresa tu usuario y contraseña para entrar en nuestra web.</p>
-                                <form>
-                                    <div class="form-group mb-3">
-                                        <input id="inputText" type="text" placeholder="Usuario" required="true" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <input id="inputPassword" type="password" placeholder="Contraseña" required="true" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
-                                    </div>
+                                <div class="form-group mb-3" style="margin:auto">
+                                <form method="post" action="">
+                                    {% csrf_token %}
+                                        <div style="margin:auto;">
+                                            {{form|crispy}}
+                                        </div>
+                                    <center><button type="submit" class="btn btn-warning btn-block text-uppercase mb-2 rounded-pill shadow-sm">Ingresar</button></center>
+                                </div>
                                     <div class="custom-control custom-checkbox mb-3">
                                         <input id="customCheck1" type="checkbox" checked class="custom-control-input">
                                         <label for="customCheck1" class="custom-control-label">Recordar contraseña</label>
                                     </div>
-                                    <button type="submit" class="btn btn-warning btn-block text-uppercase mb-2 rounded-pill shadow-sm">Ingresar</button>
                                     <center><div class="text-center d-flex justify-content-between mt-4"><p>No tienes cuenta aun?<a href="{% url "registro" %}" class="font-italic text-muted"> 
                                             <u>Crear cuenta</u></a></p></div></center>
                                 </form></center>

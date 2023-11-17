@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from AppEntrega.models import *
 from AppEntrega.forms import *
 from django.views.generic import View
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login, logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 
 class Registro(View):
@@ -28,9 +28,6 @@ def cerrar_sesion(request):
     logout(request)
     return redirect('home')
       
-    
-    
-
 #Vistas para mostrar todas las pistas
 
 def mostrarpistas(request):

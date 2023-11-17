@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from AppEntrega.models import *
 from AppEntrega.forms import *
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
 
 # Create your views here.
 
@@ -33,7 +36,21 @@ def contacto(request):
     return render(request, "AppEntrega/contacto.html")
 
 def ingreso(request):
-    return render(request, "AppEntrega/ingreso.html")
+    if request.method=="POST":
+        form=AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            nombre_usuario=form.cleaned_data.get("username")
+            contrasena=form.cleaned_data.get("password")
+            usuario=authenticate(username=nombre_usuario, password=contrasena)
+            if usuario is not None:
+                login(request, usuario)
+                return redirect('home')
+            else:
+                messages.error(request,"Usuario Incorrecto") 
+        else:
+            messages.error(request,"Usuario Incorrecto")  
+    form=AuthenticationForm()
+    return render(request, "AppEntrega/ingreso.html", {"form":form})
 
 #Vistas de los formularios
 
