@@ -5,12 +5,22 @@
 {% block contenidoquecambia %}
 
 
-    <h3><div class="text-bg-dark p-3"><p class="text-center">Estos son los grandes premios de este año</h3>
-        
-        {% for p in grandespremios %}
-            <li>
-                {{p}}
-            </li>
+    <h3><div class="text-bg-dark"><p class="text-center">Estos son los grandes premios de este año</h3>
+
+        <img src="{% static 'AppEntrega/assets/img/circuito1.png' %}" class="rounded float-end" style="width: 50%; margin:auto " alt="...">
+        {% for p in carreras %}
+        <div class="col-sm-6" style="width: 50rem; ">
+                <div class="list-group">
+                        <li class="list-group-item">
+                            {{p}}
+                        </li>
+                </div>
+            </div>
         {% endfor %}
+        </div>
+    </div>
+</div>
+
+        
 
 {% endblock contenidoquecambia %}

@@ -6,7 +6,43 @@
 
 
 <a>
-    <div class="timeline-image"><center><img class="rounded-circle img-fluid" src="{% static 'AppEntrega/assets/img/SitioConstruccion.jpg' %}" alt="..." />
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <!-- The image half -->
+            <center><div class="col-md-6 d-none d-md-flex bg-image" ></div>
+    
+    
+            <!-- The content half -->
+            <div class="col-md-6 bg-light">
+                <div class="login d-flex align-items-center py-5">
+    
+                    <!-- Demo content-->
+                    <div class="card" style="width: 50rem;">
+                        <img src="{% static 'AppEntrega/assets/img/Pilotos.jpg' %}" class="card-img-top" alt="...">
+                            <div class="col-lg-10 col-xl-7 mx-auto">
+                                <h3 class="display-4">Inicia Sesion!</h3>
+                                <p class="text-muted mb-4">Ingresa tu usuario y contraseña para entrar en nuestra web.</p>
+                                <form>
+                                    <div class="form-group mb-3">
+                                        <input id="inputText" type="text" placeholder="Usuario" required="true" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputPassword" type="password" placeholder="Contraseña" required="true" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                                        <label for="customCheck1" class="custom-control-label">Recordar contraseña</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-warning btn-block text-uppercase mb-2 rounded-pill shadow-sm">Ingresar</button>
+                                    <center><div class="text-center d-flex justify-content-between mt-4"><p>No tienes cuenta aun?<a href="{% url "registro" %}" class="font-italic text-muted"> 
+                                            <u>Crear cuenta</u></a></p></div></center>
+                                </form></center>
+                            </div>
+                        </div>
+                    </div><!-- End -->
+    
+                </div>
+            </div><!-- End -->
 </a>
 
 

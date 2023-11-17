@@ -42,7 +42,20 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Racing Tour F1!</div>
+                <div class="masthead-subheading">Racing Tour F1!</div>
+                <div class="masthead-subheading">
+                    {% if user.is_authenticated %}
+
+                    <a style= "color: yellow;">Bienvenido {{user.username}} a Racing Tour F1</a>
+
+                    {% else %}
+
+                    <a class="nav-item"><a style= "color: yellow;" class="nav-link" href="{% url "ingreso" %}">Registrate o Inicia Sesión</a>
+
+                    {% endif %}
+
+
+                </div>
                 <div class="masthead-heading text-uppercase">Vive una experiencia veloz</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#Scuderia">Conoce nuestra escuderia</a>
             </div>
