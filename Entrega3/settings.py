@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'AppEntrega',
     'AppCrud',
     'crispy_forms',
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -58,11 +58,11 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome to Racing Tour F1!!</div>
+                <div class="masthead-subheading">Welcome to Racing Tour F1!</div>
                 <div class="masthead-subheading">
                     {% if user.is_authenticated %}
 
-                    <a style= "color: yellow;">Bienvenido {{user.username}}</a>
+                    <a style= "color: yellow;">Bienvenid@ {{user.username}}</a>
 
                     {% else %}
 
@@ -78,12 +78,12 @@
         </header>
 
         <!--Este será el contenido nuevo por cada una de las vistas que tendre en la pagina-->
-
+        <section class="page-section bg-light" id="Scuderia">
         {% block contenidoquecambia%}
 
 
         {% endblock contenidoquecambia %}
-
+        </section>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
