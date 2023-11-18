@@ -5,36 +5,44 @@ from AppEntrega.forms import *
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-
+#Vistas Generales
 def inicio(request):
     return render(request, "AppEntrega/index.html")
 
 def aboutme(request):
     return render(request, "AppEntrega/aboutme.html")
 
+@login_required
 def grandespremios(request):
     return render(request, "AppCrud/grandespremios.html")
 
+@login_required
 def pilotos(request):
     return render(request, "AppEntrega/pilotos.html")
 
+@login_required
 def opcionespiloto(request):
     return render(request, "AppEntrega/opcionespiloto.html")
 
+@login_required
 def buscarpiloto(request):
     return render(request, "AppEntrega/buscarpiloto.html")
 
+@login_required
 def carreras(request):
     return render(request, "AppEntrega/carreras.html")
 
+@login_required
 def opcionescarreras(request):
     return render(request, "AppEntrega/opcionescarreras.html")
 
+@login_required
 def contacto(request):
     return render(request, "AppEntrega/contacto.html")
 
+#Vistas para Iniciar Sesion
 def ingreso(request):
     if request.method=="POST":
         form=AuthenticationForm(request, data=request.POST)
@@ -54,6 +62,7 @@ def ingreso(request):
 
 #Vistas de los formularios
 
+@login_required
 def pilotoForm(request):
     if request.method == 'POST':
         mi_Formulario = IngresoPiloto(request.POST)
@@ -67,6 +76,7 @@ def pilotoForm(request):
         mi_Formulario = IngresoPiloto()  
         return render(request, "AppEntrega/pilotos.html", {"mi_Formulario":mi_Formulario})
 
+@login_required
 def carreraForm(request):
     if request.method == 'POST':
         mi_Formulario = NuevaCarrera(request.POST)
@@ -79,7 +89,8 @@ def carreraForm(request):
     else:
         mi_Formulario = NuevaCarrera()
         return render(request, "AppEntrega/carreras.html", {"mi_Formulario":mi_Formulario})
-    
+ 
+@login_required   
 def contactForm(request):
     if request.method == 'POST':
         mi_Formulario = contactoForm(request.POST)
@@ -96,6 +107,7 @@ def contactForm(request):
 
 #Vistas de la busqueda
 
+@login_required
 def buscar(request):
     if request.GET["escuderia"]:
         escuderia=request.GET["escuderia"]

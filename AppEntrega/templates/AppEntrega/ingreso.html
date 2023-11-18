@@ -27,9 +27,15 @@
                                 <div class="form-group mb-3" style="margin:auto">
                                 <form method="post" action="">
                                     {% csrf_token %}
-                                        <div style="margin:auto;">
+                                            {% if messages %}
+                                            {% for mensaje in messages %}
+                                            <span class="alert alert-{{mensaje.tags}}">{{mensaje}}</span>
+                                            {% endfor %}
+                                            {% endif %}
+                                            <div style="margin:auto;">
+                                            <br/>
                                             {{form|crispy}}
-                                        </div>
+                                            </div>
                                     <center><button type="submit" class="btn btn-warning btn-block text-uppercase mb-2 rounded-pill shadow-sm">Ingresar</button></center>
                                 </div>
                                     <div class="custom-control custom-checkbox mb-3">
