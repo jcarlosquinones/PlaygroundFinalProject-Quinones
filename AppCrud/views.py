@@ -85,3 +85,17 @@ class PerfilView(LoginRequiredMixin, UpdateView):
         context['list_url'] = self.success_url
         context['action'] = 'edit'
         return context
+    
+# @login_required
+# def AgregarAvatar(request): 
+#     if request.method == "POST":
+#         form = AvatarForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             user = request.user()
+#             imagen = form.cleaned_data['imagen']
+#             avatar = Avatar(user=user, imagen=imagen)
+#             avatar.save()
+#             return render(request, "AppEntrega/index.html")
+#     else:
+#         form=AvatarForm
+#     return render(request, "AppCrud/avatar.html", {'form':form})    

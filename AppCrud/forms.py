@@ -62,6 +62,6 @@ class PerfilForm(ModelForm):
     
     
 class AvatarForm(forms.ModelForm):
-    class Meta:
-        model = Avatar
-        fields = '__all__'
+     class Meta:
+         model = Avatar
+         fields = '__all__'
