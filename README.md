@@ -27,7 +27,7 @@ El usuario podrá visualizar y realizar las siguientes acciones en la pagina:
  El video explicativo se encuentra en el siguiente link:
 
 # Casos de Prueba
-Archivo con casos de prueba se encuentra alojado en el siguiente link: Casos de Prueba.xlsx
+Archivo con casos de prueba se encuentra alojado en el siguiente link: [Casos de Prueba.xlsx](https://github.com/jcarlosquinones/PlaygroundFinalProject-Quinones/blob/main/Casos%20de%20Prueba.xlsx)https://github.com/jcarlosquinones/PlaygroundFinalProject-Quinones/blob/main/Casos%20de%20Prueba.xlsx
 
 
   
