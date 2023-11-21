@@ -27,7 +27,8 @@ El usuario podrá visualizar y realizar las siguientes acciones en la pagina:
  El video explicativo se encuentra en el siguiente link:
 
 # Casos de Prueba
-Archivo con casos de prueba se encuentra alojado en el siguiente link:
+Archivo con casos de prueba se encuentra alojado en el siguiente link: Casos de Prueba.xlsx
+
 
   
 
