@@ -23,8 +23,13 @@ El usuario podrá visualizar y realizar las siguientes acciones en la pagina:
   7. Tendra un apartado para editar su perfil, poder cambiar y/o agregar mas datos a su usuario o cerrar la sesion del mismo
   8. Asimismo, en la sección de home, al pinchar en "Conocer nuestra escuderia" podra visualizar 3 modales con informacion sobre Pilotos, Carreras y Contacto
 
+# Usuario Admin
+
+Usuario: admin
+Contraseña: admin1
+
  # Video Explicativo
- El video explicativo se encuentra en el siguiente link:
+ El video explicativo se encuentra en el siguiente link: https://drive.google.com/file/d/1YWq0aN99f5r7J4ORSkS6le9XzsG5tDeP/view?usp=drive_link 
 
 # Casos de Prueba
 Archivo con casos de prueba se encuentra alojado en el siguiente link: [Casos de Prueba.xlsx](https://github.com/jcarlosquinones/PlaygroundFinalProject-Quinones/blob/main/Casos%20de%20Prueba.xlsx)https://github.com/jcarlosquinones/PlaygroundFinalProject-Quinones/blob/main/Casos%20de%20Prueba.xlsx o directamente dentro de este repositorio
